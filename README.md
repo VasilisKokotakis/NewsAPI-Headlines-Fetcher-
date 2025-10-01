@@ -29,7 +29,7 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/VasilisKokotakis/NewsAPI-Headlines-Fetcher.git
-cd NewsFetcher
+cd NewsAPI-Headlines-Fetcher
 ```
 
 Install dependencies:
