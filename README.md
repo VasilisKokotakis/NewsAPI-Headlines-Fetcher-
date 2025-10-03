@@ -1,89 +1,136 @@
+# 📰 News Explorer
 
-
-# NewsFetcher: Top Headlines by Category & Query
-
-## Overview
-
-**NewsFetcher** is a Python-based tool that allows you to fetch, display, and save the latest news articles from around the web. Using the News API, this script retrieves top headlines by category or query and stores them in a readable format, making it easy to stay updated on trending topics in the US or Greece.
-
-This lightweight and easy-to-use tool is perfect for journalists, researchers, or anyone who wants a simple way to collect and organize news articles.
+A modern, cross-language news dashboard built with **Python**, **Tkinter**, and **NewsAPI**.
+Fetch top articles by category and language, view them in a scrollable, card-style interface, complete with images and clickable links.
 
 ---
 
-## Features
+## **Features**
 
-* **Fetch Top Headlines**: Retrieve the latest articles from News API based on categories like `technology`, `sports`, `general`, and more.
-* **Custom Queries**: Search for articles using any keyword or phrase, e.g., `"Elon Musk"`.
-* **Multiple Regions**: Fetch news from different countries (currently US and Greece) by adjusting the country parameter.
-* **Console Display**: Articles are printed nicely in the terminal with titles and URLs.
-* **Save to Text File**: Automatically saves fetched articles to a `.txt` file named after the category or query for easy reference.
-* **Easy to Use**: Minimal setup — just provide your News API key and a category or search term.
+* ✅ Fetch news in **multiple languages** (English, Greek, German, French, Italian, Spanish).
+* ✅ **Extended categories** (business, sports, technology, politics, health, science, travel, lifestyle, music, and more).
+* ✅ **Card-style articles** with:
+
+  * Category label
+  * Title (clickable, opens in browser)
+  * Description
+  * Image thumbnail (if available)
+* ✅ **Responsive GUI** with hover effects.
+* ✅ **Scrollable feed** for multiple articles.
+* ✅ **Loading splash screen** while fetching data.
+* ✅ **Asynchronous image fetching** for fast display.
+* ✅ API key stored securely via **environment variable** or `.env` file.
+* ✅ Easy to run in **VSCode**, terminal, or any Python IDE.
 
 ---
 
-## Getting Started
+## **Setup Instructions**
 
-### 1. Installation
-
-Clone the repository:
+### 1️⃣ Clone the repository
 
 ```bash
 git clone https://github.com/VasilisKokotakis/NewsAPI-Headlines-Fetcher.git
-cd NewsAPI-Headlines-Fetcher
+cd News_Top_Articles
 ```
-
-Install dependencies:
-
-```bash
-pip install requests
-```
-
-### 2. Configuration
-
-Open the script and replace the placeholder with your News API key:
-
-```python
-API_KEY = 'YOUR_NEWS_API_KEY'
-```
-
-### 3. Running the Script
-
-Fetch articles by category:
-
-```bash
-python3 News.py technology
-```
-
-Fetch articles by keyword query:
-
-```bash
-python3 News.py "Elon Musk"
-```
-
-If no argument is provided, it defaults to `general`.
-
-### 4. Explore Results
-
-* Articles are printed in the terminal.
-* Articles are saved to a `.txt` file named after the category or query, e.g., `technology_articles.txt`.
 
 ---
 
-## Dependencies
+### 2️⃣ Create and activate a virtual environment
 
-* Python 3.x
-* [Requests](https://docs.python-requests.org/en/master/)
-* [News API](https://newsapi.org/)
-
----
-
-## Contributions
-
-Contributions are welcome! You can submit new features, bug fixes, or improvements via pull requests. Ideas for enhancing search capabilities or supporting more countries are especially appreciated.
+```bash
+python3 -m venv env
+source env/bin/activate   # Linux/macOS
+env\Scripts\activate      # Windows
+```
 
 ---
 
-## License
+### 3️⃣ Install dependencies
 
-MIT License
+```bash
+pip install -r requirements.txt
+```
+
+**Requirements file:**
+
+```
+requests
+pillow
+python-dotenv
+```
+
+---
+
+### 4️⃣ Set your NewsAPI key
+
+#### Option A: Environment variable
+
+```bash
+export NEWSAPI_KEY="your_api_key_here"    # Linux/macOS
+setx NEWSAPI_KEY "your_api_key_here"      # Windows
+```
+
+#### Option B: `.env` file
+
+Create a `.env` file in the project root:
+
+```
+NEWSAPI_KEY=your_api_key_here
+```
+
+The script will automatically load it using `python-dotenv`.
+
+---
+
+### 5️⃣ Run the app
+
+```bash
+python News.py
+```
+
+> In VSCode: Make sure the **interpreter** is set to your virtual environment (`env/bin/python3`). Then click **Run**.
+
+---
+
+## **Usage**
+
+1. Select a **language** from the dropdown.
+2. Select a **category** from the dropdown.
+3. Click **Get News**.
+4. A new window will open with **scrollable articles**:
+
+   * Click the title or anywhere on the card to open the article in your browser.
+   * Images load asynchronously for a smooth experience.
+
+---
+
+## **Optimizations**
+
+* **Asynchronous image fetching** for fast loading.
+* **Loading splash screen** while fetching articles.
+* **Reduced number of articles** by default (20) to improve performance.
+* **Hover effect** on cards for better interactivity.
+
+---
+
+## **Future Improvements**
+
+* Lazy load images for very long feeds.
+* Multi-column layout for a real “news portal” feel.
+* Export news feed to TXT or PDF.
+* Search/filter within fetched articles.
+
+---
+
+## **Screenshots**
+
+<img width="500" height="420" alt="image" src="https://github.com/user-attachments/assets/94d29e31-ae35-4510-a7cd-2a7cf2cd2439" />
+<img width="900" height="621" alt="image" src="https://github.com/user-attachments/assets/2d7d9844-ed17-42ac-9e98-01f6956ecbda" />
+
+
+---
+
+## **License**
+
+MIT License – free to use and modify.
 
