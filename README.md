@@ -1,4 +1,4 @@
-# 📰 News Explorer
+# News Explorer
 
 A modern, cross-language news dashboard built with **Python**, **Tkinter**, and **NewsAPI**.
 Fetch top articles by category and language, view them in a scrollable, card-style interface, complete with images and clickable links.
@@ -7,26 +7,26 @@ Fetch top articles by category and language, view them in a scrollable, card-sty
 
 ## **Features**
 
-* ✅ Fetch news in **multiple languages** (English, Greek, German, French, Italian, Spanish).
-* ✅ **Extended categories** (business, sports, technology, politics, health, science, travel, lifestyle, music, and more).
-* ✅ **Card-style articles** with:
+*  Fetch news in **multiple languages** (English, Greek, German, French, Italian, Spanish).
+*  **Extended categories** (business, sports, technology, politics, health, science, travel, lifestyle, music, and more).
+*  **Card-style articles** with:
 
   * Category label
   * Title (clickable, opens in browser)
   * Description
   * Image thumbnail (if available)
-* ✅ **Responsive GUI** with hover effects.
-* ✅ **Scrollable feed** for multiple articles.
-* ✅ **Loading splash screen** while fetching data.
-* ✅ **Asynchronous image fetching** for fast display.
-* ✅ API key stored securely via **environment variable** or `.env` file.
-* ✅ Easy to run in **VSCode**, terminal, or any Python IDE.
+*  **Responsive GUI** with hover effects.
+*  **Scrollable feed** for multiple articles.
+*  **Loading splash screen** while fetching data.
+*  **Asynchronous image fetching** for fast display.
+*  API key stored securely via **environment variable** or `.env` file.
+*  Easy to run in **VSCode**, terminal, or any Python IDE.
 
 ---
 
 ## **Setup Instructions**
 
-### 1️⃣ Clone the repository
+###  Clone the repository
 
 ```bash
 git clone https://github.com/VasilisKokotakis/NewsAPI-Headlines-Fetcher.git
@@ -35,7 +35,7 @@ cd News_Top_Articles
 
 ---
 
-### 2️⃣ Create and activate a virtual environment
+###  Create and activate a virtual environment
 
 ```bash
 python3 -m venv env
@@ -45,7 +45,7 @@ env\Scripts\activate      # Windows
 
 ---
 
-### 3️⃣ Install dependencies
+### Install dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -61,7 +61,7 @@ python-dotenv
 
 ---
 
-### 4️⃣ Set your NewsAPI key
+### Set your NewsAPI key
 
 #### Option A: Environment variable
 
@@ -82,7 +82,7 @@ The script will automatically load it using `python-dotenv`.
 
 ---
 
-### 5️⃣ Run the app
+### Run the app
 
 ```bash
 python News.py
@@ -130,7 +130,6 @@ python News.py
 
 ---
 
-## **License**
+## License
 
-MIT License – free to use and modify.
-
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
